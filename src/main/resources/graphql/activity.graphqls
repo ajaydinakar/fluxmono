@@ -1,0 +1,18 @@
+type Query
+{
+    getActivity : String
+    getActivityMonoGraph : ActivityMono
+}
+
+type ActivityMono
+{
+    accessibility:Float
+    activity:String
+    key:String
+    link:String
+    participants:String
+    price :Int
+    type :String
+
+
+}
