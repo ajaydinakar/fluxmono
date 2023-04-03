@@ -17,37 +17,9 @@ public class PingController {
 
     @Autowired
     PingService service ;
-    @Autowired
-    PingBuilderService service2;
-    @GetMapping("/ping")
-    String pingme()
-    {
-     //  System.out.println(service.getService().toString());
-        Mono<Activity> activityMono=service.getMono();
-        Activity activity= activityMono.block();
-        return activity.getActivity();
-    }
-
-    @GetMapping("/ping2")
-    String pingme2()
-    {
-        //  System.out.println(service.getService().toString());
-        Mono<Activity> activityMono=service2.getMono();
-        Activity activity= activityMono.block();
-        return activity.getActivity();
-    }
-
-    @GetMapping("/activity")
-    String getActivity2()
-    {
-        return service.getActivity();
-    }
-
-    @GetMapping("/activityObject")
-    Activity getActivityMono()
-    {
-       return  service.getActivityObj();
-    }
+    //alternative service impl using webclinet builder
+//    @Autowired
+//    PingBuilderService service2;
 
     @QueryMapping
     String getActivity()
