@@ -38,7 +38,7 @@ public class PingService {
     }
     public String getActivity()
     {
-        WebClient webClient=WebClient.create("https://www.boredapi.com/api/activity");
+       // WebClient webClient=WebClient.create("https://www.boredapi.com/api/activity");
         Mono<Activity> activityMono=webClient
                 .get()
                 .retrieve()

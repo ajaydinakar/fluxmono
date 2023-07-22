@@ -6,7 +6,7 @@ type Query
 
 type ActivityMono
 {
-    accessibility:Float
+    setup:Float
     activity:String
     key:String
     link:String
